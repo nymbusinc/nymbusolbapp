@@ -1,0 +1,233 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven3.3'
+        jdk 'JDK8'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        disableConcurrentBuilds()
+    }
+    parameters {
+        string(name: 'BRANCH', description: 'Branch to be built', defaultValue: 'develop')
+    }
+    environment {
+        NEXUS_URL = "http://triton.bscpraha.cz:8081/nexus/content"
+
+        TMP_DIR = "${WORKSPACE}/tmp"
+        OLB_DIR = "${WORKSPACE}/nymbus-banks"
+        TOOL_DIR = "${OLB_DIR}/tools"
+        DB_BANKS_DIR = "${OLB_DIR}/database/banks"
+        WEB_DIR = "${OLB_DIR}/web"
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                sh "git checkout ${BRANCH}"
+                sh "git pull origin ${BRANCH}"
+            }
+        }
+        stage('Initialize') {
+            environment {
+                CUSTOMIZATION_BANKS_DIR = "${OLB_DIR}/customization/banks"
+            }
+            steps {
+                script {
+                    // Initialized here for purposes of post-actions where pom.xml is already deleted
+                    BANKS_VERSION = getBuildVersion()
+                }
+
+                sh """
+                    mkdir -p ${TMP_DIR} ${OLB_DIR} ${CUSTOMIZATION_BANKS_DIR} ${DB_BANKS_DIR} ${WEB_DIR}
+
+                    cd ${WORKSPACE}/banks
+                    for BANK_DIR in \$(ls -d */); do
+                        BANK_ID=\${BANK_DIR%%/}
+
+                        mkdir ${CUSTOMIZATION_BANKS_DIR}/\${BANK_ID}
+                        mkdir ${DB_BANKS_DIR}/\${BANK_ID}
+                        mkdir ${WEB_DIR}/\${BANK_ID}
+
+                        cd ${WORKSPACE}/banks/\${BANK_ID}
+                        cp -R catalogs operations templates texts web ${CUSTOMIZATION_BANKS_DIR}/\${BANK_ID} | true
+                    done
+                """
+            }
+        }
+        stage('Download product') {
+            steps {
+                sh """
+                    cd ${WORKSPACE}
+                    mvn dependency:copy-dependencies -U -P ${getBuildType()} -DrepoUrl=${NEXUS_URL}/groups/public-all -DexcludeTransitive=true
+
+                    cd ${TMP_DIR}
+                    jar xf ${WORKSPACE}/target/dependency/nymbus-product-*.jar
+                    cp -R nymbus-product/* ${OLB_DIR}                    
+                """
+            }
+        }
+        stage('Web') {
+            environment {
+                WEB_GENERATOR_DIR = "${OLB_DIR}/web-generator"
+            }
+            steps {
+                sh """
+                    cd ${WEB_GENERATOR_DIR}
+                    chmod +x nymbus-app-linux
+
+                    cd ${WORKSPACE}/banks
+                    for BANK_DIR in \$(ls -d */); do
+                        BANK_ID=\${BANK_DIR%%/}
+
+                        ${WEB_GENERATOR_DIR}/nymbus-app-linux build -t \${BANK_ID}/web/theme.json -o ${WEB_DIR}/\${BANK_ID}
+                    done
+
+                    cd ${WORKSPACE}
+                    rm -rf ${WEB_GENERATOR_DIR}
+                """
+            }
+        }
+        stage('Catalogs') {
+            steps {
+                sh """
+                    cd ${WORKSPACE}/banks
+                    for BANK_DIR in \$(ls -d */); do
+                        BANK_ID=\${BANK_DIR%%/}
+
+                        SQL_SCRIPT_NAME="91002_catalogs_mch_\${BANK_ID}_${BANKS_VERSION}_UDEBS"
+                        EXCEL_PATH=\${BANK_ID}/catalogs/catalogs_MCH_\${BANK_ID}.xlsx
+
+                        if [ -e \${EXCEL_PATH} ]; then
+                            java -jar ${TOOL_DIR}/catalog-import-cli-*.jar \\
+                                -f \${EXCEL_PATH} \\
+                                -o ${DB_BANKS_DIR}/\${BANK_ID}/\${SQL_SCRIPT_NAME}.sql
+                        else
+                            echo "File \${EXCEL_PATH} not found, skipping catalog customization!"
+                        fi
+                    done
+                """
+            }
+        }
+        stage('Operations') {
+            steps {
+                sh """
+                    cd ${WORKSPACE}/banks
+                    for BANK_DIR in \$(ls -d */); do
+                        BANK_ID=\${BANK_DIR%%/}
+
+                        SQL_SCRIPT_NAME="92002_operations_mch_\${BANK_ID}_${BANKS_VERSION}_UDEBS"
+                        EXCEL_PATH=\${BANK_ID}/operations/operation_types_\${BANK_ID}.xlsx
+
+                        if [ -e \${EXCEL_PATH} ]; then
+                            java -jar ${TOOL_DIR}/operation-list-import-cli-*.jar \\
+                                -f \${EXCEL_PATH} \\
+                                -o ${DB_BANKS_DIR}/\${BANK_ID}/\${SQL_SCRIPT_NAME}.sql
+                        else
+                            echo "File \${EXCEL_PATH} not found, skipping operations customization!"
+                        fi
+                    done
+                """
+            }
+        }
+        stage('Texts') {
+            environment {
+                TEXTS_TEMPLATE = "${OLB_DIR}/customization/common/texts/sql_template.txt"
+            }
+            steps {
+                sh """
+                    cd ${WORKSPACE}/banks
+                    for BANK_DIR in \$(ls -d */); do
+                        BANK_ID=\${BANK_DIR%%/}
+
+                        GIB_SQL_SCRIPT_NAME="93003_texts_gib_\${BANK_ID}_${BANKS_VERSION}_UDEBS"
+                        GIB_JSON_PATH=\${BANK_ID}/texts/gib_\${BANK_ID}_en.json
+
+                        if [ -e \${GIB_JSON_PATH} ]; then
+                            java -jar ${TOOL_DIR}/text-import-cli-*.jar \\
+                                -a GIB \\
+                                -f \${GIB_JSON_PATH} \\
+                                -o \${GIB_SQL_SCRIPT_NAME}
+
+                            eval echo -e \$(PATCH_FILENAME=\${GIB_SQL_SCRIPT_NAME} envsubst < ${TEXTS_TEMPLATE}) \\
+                                > ${DB_BANKS_DIR}/\${BANK_ID}/\${GIB_SQL_SCRIPT_NAME}.sql
+                        else
+                            echo "File \${GIB_JSON_PATH} not found, skipping GIB texts customization!"
+                        fi
+
+
+                        GMB_SQL_SCRIPT_NAME="93004_texts_gmb_\${BANK_ID}_${BANKS_VERSION}_UDEBS"
+                        GMB_JSON_PATH=\${BANK_ID}/texts/gmb_\${BANK_ID}_en.json
+
+                        if [ -e \${GMB_JSON_PATH} ]; then
+                            java -jar ${TOOL_DIR}/text-import-cli-*.jar \\
+                                -a GMB \\
+                                -f \${GMB_JSON_PATH} \\
+                                -o \${GMB_SQL_SCRIPT_NAME}
+
+                            eval echo -e \$(PATCH_FILENAME=\${GMB_SQL_SCRIPT_NAME} envsubst < ${TEXTS_TEMPLATE}) \\
+                                > ${DB_BANKS_DIR}/\${BANK_ID}/\${GMB_SQL_SCRIPT_NAME}.sql
+                        else
+                            echo "File \${GMB_JSON_PATH} not found, skipping GMB texts customization!"
+                        fi
+                    done
+                    
+                    rm -f ${TEXTS_TEMPLATE}
+                """
+            }
+        }
+        stage('Templates') {
+            steps {
+                sh """
+                    cd ${WORKSPACE}/banks
+                    for BANK_DIR in \$(ls -d */); do
+                        BANK_ID=\${BANK_DIR%%/}
+
+                        GAAS_SQL_SCRIPT_NAME="94001_templates_\${BANK_ID}_${BANKS_VERSION}_GAAS"
+                        GNC_SQL_SCRIPT_NAME="94002_templates_\${BANK_ID}_${BANKS_VERSION}_NC"
+
+                        GAAS_TEMPLATES_PATH=\${BANK_ID}/templates/gaas
+                        GNC_TEMPLATES_PATH=\${BANK_ID}/templates/gnc
+
+                        if [ -e \${GAAS_TEMPLATES_PATH} ] && [ -e \${GNC_TEMPLATES_PATH} ]; then
+                            java -jar ${TOOL_DIR}/template-import-cli-*.jar \
+                                --input \${GNC_TEMPLATES_PATH} \${GAAS_TEMPLATES_PATH} \
+                                --gaas-output ${DB_BANKS_DIR}/\${BANK_ID}/\${GAAS_SQL_SCRIPT_NAME}.sql \
+                                --gnc-output ${DB_BANKS_DIR}/\${BANK_ID}/\${GNC_SQL_SCRIPT_NAME}.sql
+                        else
+                            echo "Template directories for bank \${BANK_ID} not found, skipping templates customization!"
+                        fi
+                    done
+                """
+            }
+        }
+        stage('Package + deploy') {
+            environment {
+                ALT_DEPLOYMENT_REPOSITORY = "\"BSC Repository\"::default::${NEXUS_URL}/repositories/${getBuildType()}s"
+            }
+            steps {
+                sh """
+                    cd ${WORKSPACE}
+                    mvn -U clean deploy -DaltDeploymentRepository=${ALT_DEPLOYMENT_REPOSITORY}
+                """
+            }
+        }
+    }
+    post {
+        success {
+            build job: 'nymbus-banks-docker', parameters: [string(name: 'ARTIFACT_VERSION', value: "${BANKS_VERSION}")], wait: false
+            build job: 'nymbus-banks-patch-dev-db', parameters: [string(name: 'NYMBUS_BANKS_VERSION', value: "${BANKS_VERSION}")], wait: false
+        }
+        always {
+            cleanWs()
+        }
+    }
+}
+
+def getBuildVersion() {
+    def pom = readMavenPom()
+    return pom.version
+}
+
+def getBuildType() {
+    return getBuildVersion().endsWith('SNAPSHOT') ? 'snapshot' : 'release'
+}

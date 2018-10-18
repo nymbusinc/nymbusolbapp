@@ -1,0 +1,121 @@
+pipeline {
+    agent { label 'dockertest' }
+    tools {
+        maven 'Maven3.3'
+        jdk 'JDK8'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        disableConcurrentBuilds()
+    }
+    parameters {
+        string(description: 'Nymbus banks version', name: 'NYMBUS_BANKS_VERSION')
+    }
+    environment {
+        NEXUS_URL = "http://triton.bscpraha.cz:8081/nexus/content"
+        NEXUS_REPOSITORY = "${NEXUS_URL}/repositories/snapshots"
+        NEXUS_DOWNLOAD = "${NEXUS_URL}/groups/public-all"
+
+        SCRIPTS_DIR = "${WORKSPACE}/scripts"
+        TMP_DIR = "${WORKSPACE}/tmp"
+        OLB_DIR = "${TMP_DIR}/nymbus-banks-${NYMBUS_BANKS_VERSION}"
+        SLACK_TOKEN = "QLYGjLte30N7qeoBfor2AFsz"
+        TEAM_DOMAIN = "bsc-ideas"
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo ${BUILD}
+
+                    mkdir -p ${TMP_DIR} ${SCRIPTS_DIR}
+                '''
+            }
+        }
+        stage ('Download components') {
+            steps {
+                sh '''
+                    cd $TMP_DIR
+                    mvn dependency:get -U \
+                        -Dtransitive=false \
+                        -DrepoUrl=$NEXUS_DOWNLOAD \
+                        -Dartifact=cz.bsc.g8.nymbus:nymbus-banks:$NYMBUS_BANKS_VERSION:jar \
+                        -Ddest=.
+                    jar xf nymbus-banks-*.jar
+                    cd $WORKSPACE
+                '''
+            }
+        }
+        stage ('Processing scripts') {
+            environment {
+                DATABASE_SID = "geminidb.bscpraha.cz:1521/nymbus.geminidb.bscpraha.cz"
+            }
+            steps {
+                sh '''
+                    set +e
+                    find $TMP_DIR -regextype posix-egrep -regex '.*\\/(common|surety)\\/9.*\\.sql' -exec cp -prv '{}' $SCRIPTS_DIR ';'
+                    cd $SCRIPTS_DIR
+
+                    for SCRIPT in *.sql
+                    do
+                        sed -in '1s/^/WHENEVER SQLERROR EXIT SQL.SQLCODE;\\n/' $SCRIPT
+                        if [[ $SCRIPT =~ .*_UDEBS.sql ]]; then
+                            sqlplus UDEBS/a@${DATABASE_SID} @$SCRIPT
+                        elif [[ $SCRIPT =~ .*_GAAS.sql ]]; then
+                            sqlplus GAAS/a@${DATABASE_SID} @$SCRIPT
+                        elif [[ $SCRIPT =~ .*_NC.sql ]]; then
+                            sqlplus NC/a@${DATABASE_SID} @$SCRIPT
+                        else
+                            echo "Wrong script name ${SCRIPT}!" > ${WORKSPACE}/error.log
+                            exit 1;
+                        fi
+
+                        sqlplus_exit_code=$?
+                        if [[ $sqlplus_exit_code != '0' ]]; then
+                            LOG_NAME=$(echo "$SCRIPT" | sed "s/\\.sql/\\.log/g")
+                            ERROR_MESSAGE=$(tail -n 25 "$LOG_NAME" | egrep "PL/SQL: ORA-" | tail -n 1)
+                            if [[ $ERROR_MESSAGE != '' ]]; then
+                                echo "$ERROR_MESSAGE" > ${WORKSPACE}/error.log
+                                echo "Pipeline has failed! Reason: $ERROR_MESSAGE"
+                                exit 1
+                            fi
+                        fi
+                    done
+                    cd $WORKSPACE
+                '''
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                try {
+                    ERROR_MESSAGE = readFile("${env.WORKSPACE}/error.log").trim()
+                } catch (Exception e) {
+                    ERROR_MESSAGE = ""
+                }
+                cleanWs()
+            }
+        }
+        failure {
+            script {
+                slackSend channel: '#nymbus-jenkins',
+                          color: 'danger',
+                          message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} has failed. Reason: \"${ERROR_MESSAGE}\" (<${env.BUILD_URL}|Open>)",
+                          token: "${env.SLACK_TOKEN}",
+                          teamDomain: "${env.TEAM_DOMAIN}"
+            }
+        }
+        success {
+            script {
+                if (currentBuild.previousBuild != null && (currentBuild.previousBuild.result == null || currentBuild.previousBuild.result != 'SUCCESS')) {
+                    slackSend channel: '#nymbus-jenkins',
+                              color: 'good',
+                              message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} is back to normal (<${env.BUILD_URL}|Open>)",
+                              token: "${env.SLACK_TOKEN}",
+                              teamDomain: "${env.TEAM_DOMAIN}"
+                }
+            }
+        }
+    }
+}

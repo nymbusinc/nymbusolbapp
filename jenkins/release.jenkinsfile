@@ -1,0 +1,110 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven3.3'
+        jdk 'JDK8'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        disableConcurrentBuilds()
+    }
+    parameters {
+        choice(
+                name: 'releaseType',
+                choices: ['-- Select --','major', 'minor', 'patch'],
+                description: 'Select type of the release to be performed.')
+        string(
+                name: 'releaseBranch',
+                defaultValue: 'release/',
+                description: 'Release branch, only for patch type of release.'
+        )
+    }
+    stages {
+        stage('Major release') {
+            when {
+                expression { params.releaseType == 'major' }
+            }
+            steps {
+                releaseMajorMinor(Integer.parseInt(readVersion()[1]) + 1, 0)
+            }
+        }
+        stage('Minor release') {
+            when {
+                expression { params.releaseType == 'minor' }
+            }
+            steps {
+                releaseMajorMinor(Integer.parseInt(readVersion()[1]), Integer.parseInt(readVersion()[2]))
+            }
+        }
+        stage('Patch release') {
+            when {
+                expression { params.releaseType == 'patch' }
+            }
+            steps {
+                releasePatch("$releaseBranch")
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
+
+def releaseMajorMinor(def major, def minor) {
+    sh "git checkout develop"
+    sh "git pull origin develop"
+
+    sh "mvn -B versions:set -DgenerateBackupPoms=false -DnewVersion=${major}.${minor}.0"
+    sh "git add ."
+    sh "git commit -m 'Release ${major}.${minor}.0'"
+    sh "git tag -a v${major}.${minor}.0 -m 'Version ${major}.${minor}.0'"
+    sh "git push origin v${major}.${minor}.0"
+    sh "git push origin develop"
+
+    build job: 'nymbus-banks-build', parameters: [
+            string(name: 'BRANCH', value: 'develop')
+    ]
+
+    sh "git checkout -b release/${major}.${minor}"
+    sh "mvn -B versions:set -DgenerateBackupPoms=false -DnewVersion=${major}.${minor}.1-SNAPSHOT versions:commit"
+    sh "git add ."
+    sh "git commit -m 'release branch - move to ${major}.${minor}.1-SNAPSHOT'"
+    sh "git push origin release/${major}.${minor}"
+
+    sh "git checkout develop"
+    sh "mvn -B versions:set -DgenerateBackupPoms=false -DnewVersion=${major}.${minor + 1}.0-SNAPSHOT versions:commit"
+    sh "git add ."
+    sh "git commit -m 'develop branch - move to ${major}.${minor + 1}.0-SNAPSHOT'"
+    sh "git push origin develop"
+}
+
+def releasePatch(def releaseBranch) {
+    sh "git checkout ${releaseBranch}"
+    sh "git pull origin ${releaseBranch}"
+
+    def major = Integer.parseInt(readVersion()[1])
+    def minor = Integer.parseInt(readVersion()[2])
+    def patch = Integer.parseInt(readVersion()[3])
+    def releaseVersion = "${major}.${minor}.${patch}"
+
+    sh "mvn -B versions:set -DgenerateBackupPoms=false -DnewVersion=${releaseVersion}"
+    sh "git add ."
+    sh "git commit -m 'Release ${releaseVersion}'"
+    sh "git tag -a v${releaseVersion} -m 'Version ${releaseVersion}'"
+    sh "git push origin v${releaseVersion}"
+    sh "git push origin ${releaseBranch}"
+
+    build job: 'nymbus-banks-build', parameters: [string(name: 'BRANCH', value: "${releaseBranch}")]
+
+    sh "mvn -B versions:set -DgenerateBackupPoms=false -DnewVersion=${major}.${minor}.${patch + 1}-SNAPSHOT versions:commit"
+    sh "git add ."
+    sh "git commit -m 'release branch - move to ${major}.${minor}.${patch + 1}-SNAPSHOT'"
+    sh "git push origin ${releaseBranch}"
+}
+
+def readVersion() {
+    def matcher = readFile('pom.xml') =~ '<version>(\\d*)\\.(\\d*)\\.(\\d*)(-SNAPSHOT)*</version>'
+    matcher ? matcher[0] : null
+}

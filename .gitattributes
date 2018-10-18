@@ -1,0 +1,4 @@
+*.md            eol=lf
+*.sh            eol=lf
+*.properties    eol=lf
+Dockerfile      eol=lf

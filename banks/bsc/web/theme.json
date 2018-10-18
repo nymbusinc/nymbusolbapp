@@ -1,0 +1,22 @@
+{
+  "color": {
+    "themeWhite": "#fff",
+    "themeBlack": "#000",
+    "themePrimary": "#ff7558",
+    "themeGreen1": "#89dc65",
+    "themeGreen2": "#39b54a",
+    "themeWarning": "#ffda00",
+    "themeError": "#ff0000",
+    "themeDanger": "#f15a24",
+    "themeGray1": "#9eacaa",
+    "themeGray2": "#8e9c9c",
+    "themeGray3": "#cdced2",
+    "themeGray4": "#eef3f6",
+    "themeGray5": "#fbfbfc",
+    "themeGray6": "#d3dee3"
+  },
+  "image": {
+    "logo": "./assets/logo-bsc.png",
+    "favicon": "./assets/favicon-bsc.ico"
+  }
+}
