@@ -1,0 +1,22 @@
+{
+  "color": {
+    "themeWhite": "#ffffff",
+    "themeBlack": "#101820",
+    "themePrimary": "#0971ce",
+    "themeGreen1": "#68abe4",
+    "themeGreen2": "#34a744",
+    "themeWarning": "#101820",
+    "themeError": "#da130f",
+    "themeDanger": "#f15a24",
+    "themeGray1": "#9eacaa",
+    "themeGray2": "#8e9c9c",
+    "themeGray3": "#cdced2",
+    "themeGray4": "#f1f2f5",
+    "themeGray5": "#dcdde0",
+    "themeGray6": "#d3dee3"
+  },
+  "image": {
+    "logo": "./assets/logo-nymbus-600.jpg",
+    "favicon": "./assets/favicon-nymbus.ico"
+  }
+}
