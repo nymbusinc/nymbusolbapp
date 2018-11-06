@@ -1,0 +1,22 @@
+{
+  "color": {
+    "themeWhite": "#727272",
+    "themeBlack": "#ffffff",
+    "themePrimary": "#727272",
+    "themeGreen1": "#727272",
+    "themeGreen2": "#727272",
+    "themeWarning": "#727272",
+    "themeError": "#910f0f",
+    "themeDanger": "#f15a24",
+    "themeGray1": "#255e82",
+    "themeGray2": "#ffffff",
+    "themeGray3": "#ffffff",
+    "themeGray4": "#255e82",
+    "themeGray5": "#255e82",
+    "themeGray6": "#727272"
+  },
+  "image": {
+    "logo": "./assets/bank-md.png",
+    "favicon": "./assets/favicon.ico"
+  }
+}

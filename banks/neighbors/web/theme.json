@@ -1,0 +1,22 @@
+{
+  "color": {
+    "themeWhite": "#ffffff",
+    "themeBlack": "#333132",
+    "themePrimary": "#00395b",
+    "themeGreen1": "#0d815e",
+    "themeGreen2": "#0d815e",
+    "themeWarning": "#bb171d",
+    "themeError": "#bb171d",
+    "themeDanger": "#f15a24",
+    "themeGray1": "#057dd4",
+    "themeGray2": "#58595b",
+    "themeGray3": "#58595b",
+    "themeGray4": "#ecedf2",
+    "themeGray5": "#58595b",
+    "themeGray6": "#dbdce1"
+  },
+  "image": {
+    "logo": "./assets/nimbus-neighbors-bank-secondar.jpg",
+    "favicon": "./assets/favicon-nymbus.ico"
+  }
+}
