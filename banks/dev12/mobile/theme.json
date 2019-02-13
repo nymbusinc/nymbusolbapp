@@ -1,0 +1,24 @@
+{
+  "colors": {
+    "themePrimary": "#592d82",
+    "themeSecondary": "#636466",
+    "linkPrimary": "#592d82",
+    "themeShade": "#eaf0f4",
+    "neutralAccent": "#00000",
+    "neutralPrimary": "#3e4546",
+    "neutralSecondary": "#636466",
+    "neutralTertiary": "#d3d1dc",
+    "neutralShade": "#fafafb",
+    "neutralClear": "#ffffff",
+    "error": "#ff0000",
+    "errorAlt": "#e81123",
+    "warning": "#ffd500",
+    "warningAlt": "#bf9f00",
+    "success": "#39b54a",
+    "successAlt": "#58993a",
+    "accountAccent": "#404040",
+    "accountAccentAlt": "#6d6969",
+    "loanAccent": "#7c46af",
+    "loanAccentAlt": "#7c46af"
+  }
+}
