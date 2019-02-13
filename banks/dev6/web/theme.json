@@ -1,0 +1,22 @@
+{
+  "color": {
+    "themeWhite": "#ffffff",
+    "themeBlack": "#000000",
+    "themePrimary": "#592d82",
+    "themeGreen1": "#6f9b69",
+    "themeGreen2": "#39b54a",
+    "themeWarning": "#ffda00",
+    "themeError": "#ff0000",
+    "themeDanger": "#ff0000",
+    "themeGray1": "#9eacaa",
+    "themeGray2": "#636466",
+    "themeGray3": "#636466",
+    "themeGray4": "#e6e6e6",
+    "themeGray5": "#fbfbfc",
+    "themeGray6": "#e6e6e6"
+  },
+  "image": {
+    "logo": "./assets/logo-inspire-600.png",
+    "favicon": "./assets/favicon-inspire.ico"
+  }
+}
