@@ -1,22 +1,22 @@
 {
   "color": {
     "themeWhite": "#ffffff",
-    "themeBlack": "#5a5a5a",
-    "themePrimary": "#057dd4",
-    "themeGreen1": "#057dd4",
-    "themeGreen2": "#34a744",
-    "themeWarning": "#057dd4",
-    "themeError": "#ff0000",
+    "themeBlack": "#eee809",
+    "themePrimary": "#dc107a",
+    "themeGreen1": "#dc107a",
+    "themeGreen2": "#14cce0",
+    "themeWarning": "#14cce0",
+    "themeError": "#eee809",
     "themeDanger": "#f15a24",
-    "themeGray1": "#057dd4",
-    "themeGray2": "#8e9c9c",
-    "themeGray3": "#cdced2",
-    "themeGray4": "#ecedf2",
-    "themeGray5": "#ffffff",
-    "themeGray6": "#dbdce1"
+    "themeGray1": "#a4227c",
+    "themeGray2": "#a4227c",
+    "themeGray3": "#eee809",
+    "themeGray4": "#260b35",
+    "themeGray5": "#a4227c",
+    "themeGray6": "#260b35"
   },
   "image": {
-    "logo": "./assets/logo-nymbus-600.jpg",
+    "logo": "./assets/logo-nymbus-600.png",
     "favicon": "./assets/favicon-nymbus.ico"
   }
 }
