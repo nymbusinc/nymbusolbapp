@@ -5,14 +5,14 @@
     "themePrimary": "#260b35",
     "themeGreen1": "#a4227c",
     "themeGreen2": "#a4227c",
-    "themeWarning": "#eee809",
+    "themeWarning": "#a4227c",
     "themeError": "#14cce0",
     "themeDanger": "#f15a24",
-    "themeGray1": "#14cce0",
+    "themeGray1": "#260b35",
     "themeGray2": "#a4227c",
     "themeGray3": "#a4227c",
-    "themeGray4": "#eee809",
-    "themeGray5": "#dc107a",
+    "themeGray4": "#ffffff",
+    "themeGray5": "#eee809",
     "themeGray6": "#260b35"
   },
   "image": {
