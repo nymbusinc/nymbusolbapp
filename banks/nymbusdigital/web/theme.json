@@ -1,18 +1,18 @@
 {
   "color": {
     "themeWhite": "#ffffff",
-    "themeBlack": "#eee809",
-    "themePrimary": "#dc107a",
-    "themeGreen1": "#dc107a",
-    "themeGreen2": "#14cce0",
-    "themeWarning": "#14cce0",
-    "themeError": "#eee809",
+    "themeBlack": "#260b35",
+    "themePrimary": "#260b35",
+    "themeGreen1": "#a4227c",
+    "themeGreen2": "#a4227c",
+    "themeWarning": "#eee809",
+    "themeError": "#14cce0",
     "themeDanger": "#f15a24",
-    "themeGray1": "#a4227c",
+    "themeGray1": "#14cce0",
     "themeGray2": "#a4227c",
-    "themeGray3": "#eee809",
-    "themeGray4": "#260b35",
-    "themeGray5": "#a4227c",
+    "themeGray3": "#a4227c",
+    "themeGray4": "#eee809",
+    "themeGray5": "#dc107a",
     "themeGray6": "#260b35"
   },
   "image": {
