@@ -1,19 +1,19 @@
 {
   "color": {
     "themeWhite": "#ffffff",
-    "themeBlack": "#260b35",
-    "themePrimary": "#260b35",
+    "themeBlack": "#a4227c",
+    "themePrimary": "#a4227c",
     "themeGreen1": "#a4227c",
     "themeGreen2": "#a4227c",
     "themeWarning": "#a4227c",
-    "themeError": "#14cce0",
+    "themeError": "#dc107a",
     "themeDanger": "#f15a24",
     "themeGray1": "#260b35",
     "themeGray2": "#a4227c",
     "themeGray3": "#a4227c",
-    "themeGray4": "#ffffff",
-    "themeGray5": "#eee809",
-    "themeGray6": "#260b35"
+    "themeGray4": "#14cce0",
+    "themeGray5": "#f2f2f2",
+    "themeGray6": "#a4227c"
   },
   "image": {
     "logo": "./assets/logo-nymbus-600.png",
