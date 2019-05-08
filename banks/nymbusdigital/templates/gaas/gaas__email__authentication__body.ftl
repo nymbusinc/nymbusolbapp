@@ -1,1 +1,1 @@
-Nymbus Digital: Enter this secure access code to authenticate your device: ${code}. Code valid until ${validTo?time}. Questions, call 855-478-7389.
+Booyah: Enter this secure access code to authenticate your device: ${code}. Code valid until ${validTo?time}. Questions, call (888) 597-7137.

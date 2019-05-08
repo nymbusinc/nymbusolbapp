@@ -1,1 +1,1 @@
-Nymbus Digital: ${code} is the activation code for your account. It is valid until ${validTo?time}.
+Booyah: ${code} is the activation code for your account. It is valid until ${validTo?time}.
