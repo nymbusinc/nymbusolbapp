@@ -1,1 +1,1 @@
-NYMBUS Digital: ${code} is the authorization code for your transfer to the amount ${amount?string["0.00"]}. It is valid until ${validTo?time}.
+Inspire Federal Credit Union: ${code} is the authorization code for your transfer to the amount ${amount?string["0.00"]}. It is valid until ${validTo?time}.

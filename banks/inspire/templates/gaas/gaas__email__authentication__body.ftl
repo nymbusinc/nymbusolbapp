@@ -1,1 +1,1 @@
-NYMBUS Digital: Enter this secure access code to authenticate your device: ${code}. Code valid until ${validTo?time}. Questions, call 888-597-7137.
+Inspire Federal Credit Union: Enter this secure access code to authenticate your device: ${code}. Code valid until ${validTo?time}. Questions, call (215) 788-5270.

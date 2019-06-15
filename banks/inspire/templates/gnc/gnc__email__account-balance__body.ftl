@@ -7,11 +7,11 @@
     <title>Account balance change</title>
 </head>
 <body>
-Dear client,<br><br>
-available balance on your account ${accountNumberPublic} ${(accountAlias)!""} <#if accountDispoBalanceBeforeAmount?number gt accountDispoBalanceAfterAmount?number>below<#else>above</#if> <#if accountCurrencyID == "USD">$</#if>${subscriptionConditions['accountDispoBalanceBeforeAmount']}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if>. Available balance is now <#if accountCurrencyID == "USD">$</#if>${accountDispoBalanceAfterAmount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if>.
+Dear Member,<br><br>
+Available balance on your account ${accountNumberPublic} ${(accountAlias)!""} <#if accountDispoBalanceBeforeAmount?number gt accountDispoBalanceAfterAmount?number>below<#else>above</#if> <#if accountCurrencyID == "USD">$</#if>${subscriptionConditions['accountDispoBalanceBeforeAmount']}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if>. Available balance is now <#if accountCurrencyID == "USD">$</#if>${accountDispoBalanceAfterAmount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if>.
 <br><br>
 Sincerely,
-<br>NYMBUS Digital
+<br>Inspire Federal Credit Union
 <br><br>
 Please do not respond to this e-mail; it has been generated automatically.
 <br>

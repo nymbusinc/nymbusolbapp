@@ -1,1 +1,1 @@
-Welcome to NYMBUS Digital Internet Banking
+Welcome to Inspire Federal Credit Union Online/Mobile Banking

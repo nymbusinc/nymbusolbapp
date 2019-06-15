@@ -1,1 +1,1 @@
-NYMBUS Digital: ${code} is the activation code for your account. It is valid until ${validTo?time}.
+Inspire Federal Credit Union: ${code} is the activation code for your account. It is valid until ${validTo?time}.

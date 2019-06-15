@@ -1,1 +1,1 @@
-Important Message from BSC
+Important Message from Inspire

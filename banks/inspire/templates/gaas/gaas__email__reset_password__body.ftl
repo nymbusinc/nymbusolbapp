@@ -1,1 +1,1 @@
-NYMBUS Digital: ${code} is your temporary password. Log into your account within 24 hours. Questions, call 888-597-7137. Thank you.
+InspireFederal Credit Union: ${code} is your temporary password. Log into your account within 24 hours. Questions, call (215) 788-5270. Thank you.

@@ -1,1 +1,1 @@
-NYMBUS Digital: ${code} is your temporary password. Log into your account within 24 hours. Questions, call 888-597-7137. Thank you.
+Inspire FCU: ${code} is your temporary password. Please use this with your registered email address to log into online banking.
