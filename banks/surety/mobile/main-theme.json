@@ -105,9 +105,9 @@
   },
   "modernDashboard": {
     "backgroundColor": "#8D3630",
-    "stripBackgroundColor": "#000000",
-    "boxBackgroundColor": "#ffffff",
+    "stripBackgroundColor": "#ffffff",
+    "boxBackgroundColor": "#000000",
     "iconBackgroundColor": "#8D3630",
-    "iconTextColor": "#000000"
+    "iconTextColor": "#ffffff"
   }
 }
