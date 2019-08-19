@@ -10,6 +10,6 @@ Dear ${alertReceiverContactName},<br><br>
 You have received an important message waiting for you online. To view this message, please sign into your Online Banking or Mobile application. If you have any questions regarding your message or experience problems retrieving your message, please contact us.<br><br>
 Your satisfaction matters. If our service falls short of your expectations, let us know right away so we can address your concerns. Please contact us at 855-4SURETY.<br><br>
 Best regards,<br>
-BSC.
+Surety.
 </body>
 </html>

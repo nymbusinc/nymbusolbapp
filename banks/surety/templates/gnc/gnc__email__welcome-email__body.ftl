@@ -8,7 +8,7 @@
 <body>
 Welcome to Surety Bank. We make it easy for you to manage your accounts. We also give you the best of both worlds to do it. You get the efficiency and productivity of using our online banking platform while having access to a real support person who can help you with any need that comes up. Online banking comes standard with our accounts giving you access to your money at all times.<br><br>
 <b>To sign up for Surety Bank's SmartDigital Internet Banking:</b><br>
-Click <a href="https://suretyditloolb.nymbus.com" target="_blank">Enroll</a> and follow these 3 easy steps...
+Click <a href="https://suretyolb.nymbus.com" target="_blank">Enroll</a> and follow these 3 easy steps...
 <ul>
     <li>Enter your email address as your username.</li>
     <li>Enter the temporary password received via text on your mobile device, and create your new password.</li>
