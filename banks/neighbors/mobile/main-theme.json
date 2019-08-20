@@ -60,7 +60,7 @@
       "color": "#000000",
       "height": 40,
       "width": 35,
-      "placeholder": "*"
+      "placeholder": "*",
       "placeholderColor": "#000000"
     },
     "switch": {

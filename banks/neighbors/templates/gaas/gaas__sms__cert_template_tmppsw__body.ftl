@@ -1,1 +1,1 @@
-Nymbus Digital: ${code} is the activation code for your account. It is valid until ${validTo?time}.
+Neighbors: ${code} is the activation code for your account. It is valid until ${validTo?time}.

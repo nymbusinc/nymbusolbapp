@@ -1,1 +1,1 @@
-Nymbus Digital: ${code} is your temporary password. Log into your account within 24 hours. Questions, call 855-478-7389. Thank you.
+Neighbors: ${code} is your temporary password. Log into your account within 24 hours. Questions, call (888) 597-7143. Thank you.
