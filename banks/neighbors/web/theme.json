@@ -3,17 +3,17 @@
     "themeWhite": "#ffffff",
     "themeBlack": "#333132",
     "themePrimary": "#00395b",
-    "themeGreen1": "#0d815e",
-    "themeGreen2": "#0d815e",
-    "themeWarning": "#bb171d",
+    "themeGreen1": "#0D815E",
+    "themeGreen2": "#0D815E",
+    "themeWarning": "#BB171D",
     "themeError": "#bb171d",
     "themeDanger": "#f15a24",
-    "themeGray1": "#057dd4",
+    "themeGray1": "#0D815E",
     "themeGray2": "#58595b",
     "themeGray3": "#58595b",
     "themeGray4": "#ecedf2",
-    "themeGray5": "#58595b",
-    "themeGray6": "#dbdce1"
+    "themeGray5": "#ffffff",
+    "themeGray6": "#d3dee3"
   },
   "image": {
     "logo": "./assets/nimbus-neighbors-bank-secondar.jpg",
