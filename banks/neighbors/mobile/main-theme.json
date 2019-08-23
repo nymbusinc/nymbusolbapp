@@ -19,7 +19,7 @@
     "accountAccent": "#0D815E",
     "accountAccentAlt": "#58993a",
     "depositAccent": "#0D815E",
-    "loanAccent": "#8D3630",
+    "loanAccent": "#0D815E",
     "loanAccentAlt": "#bf9f0",
     "hintColor": "#9eacaa"
   },
@@ -68,7 +68,7 @@
       "active": "#7cd952"
     },
     "buttons": {
-      "primaryBackgroundColor": "#8D3630",
+      "primaryBackgroundColor": "#0D815E",
       "secondaryBackgroundColor": "#7e8a8b",
       "padding": "5px 20px",
       "borderRadius": 20,
@@ -78,8 +78,8 @@
       "fontWeight": "normal"
     },
     "radioButtons": {
-      "buttonInnerColor": "#8D3630",
-      "buttonOuterColor": "#8D3630"
+      "buttonInnerColor": "#0D815E",
+      "buttonOuterColor": "#0D815E"
     }
   },
   "components": {
@@ -110,10 +110,10 @@
     }
   },
   "modernDashboard": {
-    "backgroundColor": "#8D3630",
+    "backgroundColor": "#0D815E",
     "stripBackgroundColor": "#ffffff",
     "boxBackgroundColor": "#000000",
-    "iconBackgroundColor": "#8D3630",
+    "iconBackgroundColor": "#0D815E",
     "iconTextColor": "#ffffff"
   }
 }
