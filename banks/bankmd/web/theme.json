@@ -1,19 +1,19 @@
 {
   "color": {
-    "themeWhite": "#727272",
-    "themeBlack": "#ffffff",
-    "themePrimary": "#727272",
-    "themeGreen1": "#727272",
-    "themeGreen2": "#727272",
-    "themeWarning": "#727272",
+    "themeWhite": "#ffffff",
+    "themeBlack": "#000000",
+    "themePrimary": "#045a81",
+    "themeGreen1": "#045a81",
+    "themeGreen2": "#808080",
+    "themeWarning": "#808080",
     "themeError": "#910f0f",
-    "themeDanger": "#f15a24",
-    "themeGray1": "#255e82",
+    "themeDanger": "#910f0f",
+    "themeGray1": "#045a81",
     "themeGray2": "#ffffff",
-    "themeGray3": "#ffffff",
-    "themeGray4": "#255e82",
-    "themeGray5": "#255e82",
-    "themeGray6": "#727272"
+    "themeGray3": "#cdced2",
+    "themeGray4": "#ededed",
+    "themeGray5": "#ffffff",
+    "themeGray6": "#d3dee3"
   },
   "image": {
     "logo": "./assets/bank-md.png",
