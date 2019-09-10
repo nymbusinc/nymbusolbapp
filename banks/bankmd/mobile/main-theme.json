@@ -28,7 +28,7 @@
   },
   "forms": {
     "labels": {
-      "color": "#7e8a8b"
+      "color": "#045A81"
     },
     "hints": {
       "color": "#000000"
@@ -48,11 +48,11 @@
       "padding": "2px 5px",
       "backgroundColor": "transparent",
       "borderRadius": 2,
-      "borderBottomColor": "#000000",
+      "borderBottomColor": "#808080",
       "borderBottomWidth": 2,
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#000000",
+      "color": "#045A81",
       "height": 40,
       "width": 35,
       "placeholder": "*"
@@ -62,8 +62,8 @@
       "active": "#7cd952"
     },
     "buttons": {
-      "primaryBackgroundColor": "#8D3630",
-      "secondaryBackgroundColor": "#7e8a8b",
+      "primaryBackgroundColor": "#045A81",
+      "secondaryBackgroundColor": "#808080",
       "padding": "5px 20px",
       "borderRadius": 20,
       "primaryColor": "#fafafb",
@@ -79,9 +79,9 @@
   "components": {
     "generic": {
       "alert": {
-        "overlayColor": "rgba(49,49,49, 0.7)",
-        "backgroundColor": "#ebe9e3",
-        "buttonsColor": "#1287ff"
+        "overlayColor": "#808080",
+        "backgroundColor": "#EAEAEA",
+        "buttonsColor": "#045A81"
       },
       "header": {
         "fontSize": 20,
@@ -99,7 +99,7 @@
     },
     "specific": {
       "alternativeMethod": {
-        "color": "#000000"
+        "color": "#045A81"
       }
     }
   },

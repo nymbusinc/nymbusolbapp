@@ -18,7 +18,7 @@
     "successAlt": "#58993a",
     "accountAccent": "#404040",
     "accountAccentAlt": "#6d6969",
-    "depositAccent": "#39b54a",
+    "depositAccent": "#7c46af",
     "loanAccent": "#7c46af",
     "loanAccentAlt": "#7c46af",
     "hintColor": "#9eacaa"
@@ -28,7 +28,7 @@
   },
   "forms": {
     "labels": {
-      "color": "#7e8a8b"
+      "color": "#592D82"
     },
     "hints": {
       "color": "#000000"
@@ -48,7 +48,7 @@
       "padding": "2px 5px",
       "backgroundColor": "transparent",
       "borderRadius": 2,
-      "borderBottomColor": "#000000",
+      "borderBottomColor": "#636466",
       "borderBottomWidth": 2,
       "fontSize": 15,
       "fontWeight": "bold",
@@ -62,8 +62,8 @@
       "active": "#7cd952"
     },
     "buttons": {
-      "primaryBackgroundColor": "#8D3630",
-      "secondaryBackgroundColor": "#7e8a8b",
+      "primaryBackgroundColor": "#592D82",
+      "secondaryBackgroundColor": "#E6E6E6",
       "padding": "5px 20px",
       "borderRadius": 20,
       "primaryColor": "#fafafb",
@@ -79,9 +79,9 @@
   "components": {
     "generic": {
       "alert": {
-        "overlayColor": "rgba(49,49,49, 0.7)",
-        "backgroundColor": "#ebe9e3",
-        "buttonsColor": "#1287ff"
+        "overlayColor": "#636463",
+        "backgroundColor": "#E6E6E6",
+        "buttonsColor": "#592D82"
       },
       "header": {
         "fontSize": 20,
@@ -99,7 +99,7 @@
     },
     "specific": {
       "alternativeMethod": {
-        "color": "#000000"
+        "color": "#592D82"
       }
     }
   },
