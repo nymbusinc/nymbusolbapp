@@ -1,1 +1,1 @@
-Nymbus Digital: new transaction <#if accountCurrencyID == "USD">$</#if>${amount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if> was executed on ${accountNumberPublic} ${(accountAlias)!""} account on ${postingDate}.
+BankMD: A new transaction of <#if accountCurrencyID == "USD">$</#if>${amount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if> was executed on account ${accountNumberPublic} on ${postingDate}.

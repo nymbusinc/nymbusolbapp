@@ -1,1 +1,1 @@
-Nymbus Digital: ${code} is your temporary password. Log into your account within 24 hours. Questions, call 855-478-7389. Thank you.
+BankMD: ${code} is your temporary password. Please log into your account within 24 hours. Questions, call us at (888) 534-3509.

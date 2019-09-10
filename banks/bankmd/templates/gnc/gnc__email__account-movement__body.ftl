@@ -9,7 +9,7 @@
 <body>
 Dear client,
 <br><br>
-a ${direction?lower_case} transaction amounting to <#if accountCurrencyID == "USD">$</#if>${amount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if> was executed on ${accountNumberPublic} ${(accountAlias)!""} account on ${postingDate}.
+A ${direction?lower_case} transaction amounting to <#if accountCurrencyID == "USD">$</#if>${amount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if> was executed on account ${accountNumberPublic} on ${postingDate}.
 <br><br>
 More details:<br>
 <table style="padding-left: 10px;">
@@ -23,7 +23,7 @@ More details:<br>
 </table>
 <br><br>
 Sincerely,<br>
-Nymbus Digital
+BankMD
 <br><br>
 Please do not respond to this e-mail; it has been generated automatically.
 <br>

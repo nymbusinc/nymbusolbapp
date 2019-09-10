@@ -1,1 +1,1 @@
-Welcome to Nymbus Digital Banking
+Welcome to BankMD!
