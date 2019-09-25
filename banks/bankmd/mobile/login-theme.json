@@ -19,5 +19,8 @@
         "fontWeight": 900
       }
     }
+  },
+  "menu": {
+    "iconItemColor": "#000"
   }
 }

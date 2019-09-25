@@ -26,6 +26,11 @@
   "layout": {
     "backgroundColor": "#ffffff"
   },
+  "menu": {
+    "iconItemColor": "#000",
+    "arrowAndroidColor": "gray",
+    "arrowIosColor": "#000"
+  },
   "forms": {
     "labels": {
       "color": "#045A81"
