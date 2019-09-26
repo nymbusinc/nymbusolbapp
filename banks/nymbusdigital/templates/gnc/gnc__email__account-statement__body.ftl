@@ -9,11 +9,10 @@
 <body>
 <p>
 Your most recent eStatement is now available online. Please log in to your Online or Mobile Banking application to view your eStatement.
-</p><p>
+</p>
 If you have any questions about your statement, please contact us via Secure Message within booyah! Online or Mobile Banking or please call 888-597-7137 to speak to one of our representatives.
-</p><p>
+</p>
 Best Regards,
-</p><p>
 booyah!
 </p>
 </body>
