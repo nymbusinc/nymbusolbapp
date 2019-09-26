@@ -1,1 +1,1 @@
-Welcome to Booyah! ${code} is your temporary password. Use this and your registered email to log in at https://booyaholb.nymbus.com/
+booyah!: ${code} is the activation code for your account. It is valid until ${validTo?time}.

@@ -1,1 +1,1 @@
-Account Balance Change Alert
+Account balance change

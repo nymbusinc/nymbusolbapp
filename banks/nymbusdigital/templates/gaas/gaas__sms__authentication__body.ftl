@@ -1,1 +1,1 @@
-Booyah: Enter this secure access code to authenticate your device: ${code}. Code valid until ${validTo?time}. Questions, call (888) 597-7137
+booyah!: Enter this secure access code to authenticate your device: ${code}. Code valid until ${validTo?time}. Questions? Call 888-597-7137.

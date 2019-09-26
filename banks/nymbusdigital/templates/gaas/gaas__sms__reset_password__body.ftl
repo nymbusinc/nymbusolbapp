@@ -1,1 +1,1 @@
-Booyah: ${code} is your temporary password. Please log into your account within 24 hours. Questions, call us at (888) 597-7137
+booyah!: ${code} is your temporary password. Please log into your account within 24 hours. Questions? Call 888-597-7137.

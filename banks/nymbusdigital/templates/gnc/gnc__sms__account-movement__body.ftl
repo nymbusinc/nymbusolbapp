@@ -1,1 +1,1 @@
-Booyah: A new transaction of <#if accountCurrencyID == "USD">$</#if>${amount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if> was executed on account ${accountNumberPublic} on ${postingDate}.
+booyah!: New transaction <#if accountCurrencyID == "USD">$</#if>${amount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if> was executed on ${accountNumberPublic} ${(accountAlias)!""} account on ${postingDate}.

@@ -1,1 +1,1 @@
-New Secure Message from Booyah
+New Secure Message in booyah! Online/Mobile Banking

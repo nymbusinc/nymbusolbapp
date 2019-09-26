@@ -6,6 +6,6 @@
     <title>New Secure Message in Online/Mobile Banking</title>
 </head>
 <body>
-A new secure message has been sent to you by Booyah. <br>Please log in to Online/Mobile Banking to view this message.<br>
+A new secure message has been sent to your Financial Institution by "${userFirstName} ${userLastName}". <br>Please log in to Online/Mobile Banking Admin to view the secure message.<br>
 </body>
 </html>
