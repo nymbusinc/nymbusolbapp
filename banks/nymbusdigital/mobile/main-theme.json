@@ -67,8 +67,8 @@
       "active": "#7cd952"
     },
     "buttons": {
-      "primaryBackgroundColor": "#8D3630",
-      "secondaryBackgroundColor": "#7e8a8b",
+      "primaryBackgroundColor": "#260b35",
+      "secondaryBackgroundColor": "#a4227c",
       "padding": "5px 20px",
       "borderRadius": 20,
       "primaryColor": "#fafafb",
@@ -77,8 +77,8 @@
       "fontWeight": "normal"
     },
     "radioButtons": {
-      "buttonInnerColor": "#8D3630",
-      "buttonOuterColor": "#8D3630"
+      "buttonInnerColor": "#260b35",
+      "buttonOuterColor": "#260b35"
     }
   },
   "components": {
@@ -86,14 +86,14 @@
       "alert": {
         "overlayColor": "rgba(49,49,49, 0.7)",
         "backgroundColor": "#ebe9e3",
-        "buttonsColor": "#1287ff"
+        "buttonsColor": "#dc107a"
       },
       "header": {
         "fontSize": 20,
         "fontWeight": 800
       },
       "links": {
-        "color": "#1287ff"
+        "color": "#14cce0"
       },
       "text": {
         "color": "#000000"
