@@ -7,8 +7,13 @@
 
 		"app.footer.copyright": "Created for Inspire Federal Credit Union by NYMBUS. Use of this system is limited to authorized users only and can be monitored.",
 
+        "common.bankNameShort": "Inspire",
+		"auth.login.passwordReset.successPhoneNumber": "(800) 450-5656",
+		"auth.login.passwordReset.successPart1": "Data successfully sent. If you entered everything correctly, you will get the new temporary password sent to you shortly.",
 
-		"auth.login.passwordReset.successPhoneNumber": "(800) 450-5656",	
+		"auth.login.loginnameResend.successText": "Data successfully sent. If you entered everything correctly, you will get the username sent to you shortly.If you do not receive it within 5 minutes, you should contact us here: {LOCAL_BANK_CONTACT_PHONE}. Thank you.",
+		"auth.login.loginnameResend.failNotUnique": "We were not able to identify you by this contact. Please try with the other one or call us at {LOCAL_BANK_CONTACT_PHONE}. Thank you.",
+	
 
 "checks.stopPayment.new.disclosure": "Stop payments are not guaranteed, however we will make every attempt to complete your request. If the item was sent electronically or if we have already accepted the check for processing, we will not be able to stop the item.  The stop payment will remain in effect for the next 6 months and your account will be charged a stop payment fee for this service in accordance with your accounts fee schedule.  If you have any questions about the stop payment process call us at tel: (800) 450-5656."
 
