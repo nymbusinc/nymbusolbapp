@@ -1,0 +1,26 @@
+{
+  "forms": {
+    "inputs": {
+      "padding": "15px 15px",
+      "fontWeight": "normal",
+      "height": 60
+    },
+    "buttons": {
+      "padding": "16px 0",
+      "borderRadius": 40,
+      "fontSize": 20,
+      "fontWeight": 800
+    }
+  },
+  "components": {
+    "generic": {
+      "header": {
+        "fontSize": 26,
+        "fontWeight": 900
+      }
+    }
+  },
+  "menu": {
+    "iconItemColor": "#000"
+  }
+}
