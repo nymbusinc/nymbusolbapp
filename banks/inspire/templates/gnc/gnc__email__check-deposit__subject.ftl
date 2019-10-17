@@ -1,0 +1,1 @@
+We've Received Your ${bankName} Mobile Deposit
