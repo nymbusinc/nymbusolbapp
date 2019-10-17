@@ -7,7 +7,7 @@
     "neutralAccent": "#00000",
     "neutralPrimary": "#3e4546",
     "neutralSecondary": "#05c3de",
-    "neutralTertiary": "#05c3de",
+    "neutralTertiary": "#d8e1e4",
     "neutralShade": "#fafafb",
     "neutralClear": "#ffffff",
     "error": "#910f0f",
@@ -39,7 +39,7 @@
       "color": "#000000"
     },
     "inputs": {
-      "backgroundColor": "#05c3de",
+      "backgroundColor": "#fff",
       "borderRadius": 2,
       "borderWidth": 1,
       "borderColor": "#7e8a8b",
@@ -84,7 +84,7 @@
   "components": {
     "generic": {
       "alert": {
-        "overlayColor": "#05c3de",
+        "overlayColor": "#0033a0",
         "backgroundColor": "#eaeaea",
         "buttonsColor": "#0033a0"
       },
