@@ -1,0 +1,22 @@
+{
+  "color": {
+    "themeWhite": "#ffffff",
+    "themeBlack": "#000000",
+    "themePrimary": "#0033a0",
+    "themeGreen1": "#0033a0",
+    "themeGreen2": "#6aa84f",
+    "themeWarning": "#05c3de",
+    "themeError": "#910f0f",
+    "themeDanger": "#910f0f",
+    "themeGray1": "#05c3de",
+    "themeGray2": "#cdced2",
+    "themeGray3": "#cdced2",
+    "themeGray4": "#ecedf2",
+    "themeGray5": "#ffffff",
+    "themeGray6": "#d3dee3"
+  },
+  "image": {
+    "logo": "./assets/logo-PNB.png",
+    "favicon": "./assets/favicon-facile.ico"
+  }
+}
