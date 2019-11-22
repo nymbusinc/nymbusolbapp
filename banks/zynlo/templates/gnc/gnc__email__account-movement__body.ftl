@@ -23,7 +23,7 @@ More details:<br>
 </table>
 <br><br>
 Sincerely,<br>
-FACILE
+ZYNLO
 <br><br>
 Please do not respond to this e-mail; it has been generated automatically.
 <br>

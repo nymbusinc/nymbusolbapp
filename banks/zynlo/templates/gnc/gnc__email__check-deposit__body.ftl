@@ -11,11 +11,11 @@
 We've received your Mobile Deposit of
 <#if accountCurrencyID == "USD">$</#if>${amount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if> made on ${postingDate} to your Account ending in ${maskedAccountNumber}.
 </p><p>
-Deposits submitted before 4 PM EST on a business day generally will be available by the next business day. Deposits submitted after 4 PM EST or on a non-business day will be processed the next business day.
+Deposits submitted before 4 PM EST on a business day generally will be processed same business day. Deposits submitted after 4 PM EST or on a non-business day will be processed the next business day.
 </p><p>
 We will review your deposit and let you know when your funds will be available.
 </p><p>
-Your satisfaction matters. If our service falls short of your expectations, let us know right away so we can address your concerns. Please contact us at 833-682-3827.
+Your satisfaction matters. If our service falls short of your expectations, let us know right away so we can address your concerns. Please contact us at 833-682-3852.
 </p>
 </body>
 </html>

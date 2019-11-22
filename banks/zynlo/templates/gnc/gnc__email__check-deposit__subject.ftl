@@ -1,1 +1,1 @@
-We've Received Your FACILE Mobile Deposit
+We've Received Your ZYNLO Mobile Deposit

@@ -10,11 +10,11 @@
 <p>
 Your most recent eStatement is now available online. Please log in to your Online or Mobile Banking application to view your eStatement.
 </p><p>
-If you have any questions about your statement, please contact us via Secure Message within FACILE Online or Mobile Banking or please call 833-682-3827 to speak to one of our representatives.
+If you have any questions about your statement, please contact us via Secure Message within ZYNLO Online or Mobile Banking or please call 833-682-3852 to speak to one of our representatives.
 </p><p>
 Best Regards,
 </p><p>
-FACILE
+ZYNLO
 </p>
 </body>
 </html>
