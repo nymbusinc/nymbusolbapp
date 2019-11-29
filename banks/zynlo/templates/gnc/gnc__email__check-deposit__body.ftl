@@ -15,7 +15,7 @@ Deposits submitted before 4 PM EST on a business day generally will be processed
 </p><p>
 We will review your deposit and let you know when your funds will be available.
 </p><p>
-Your satisfaction matters. If our service falls short of your expectations, let us know right away so we can address your concerns. Please contact us at 833-682-3852.
+Your satisfaction matters. If our service falls short of your expectations, let us know right away so we can address your concerns. Please contact us at 844-996-5622.
 </p>
 </body>
 </html>

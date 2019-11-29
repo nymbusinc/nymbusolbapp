@@ -1,1 +1,1 @@
-ZYNLO: ${code} is your temporary password. Please log into your account within 24 hours. Questions? Call 833-682-3852.
+ZYNLO: ${code} is your temporary password. Please log into your account within 24 hours. Questions? Call 844-996-5622.

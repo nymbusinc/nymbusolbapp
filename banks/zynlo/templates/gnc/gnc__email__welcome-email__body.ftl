@@ -12,9 +12,9 @@ Welcome to ZYNLO. We make it easy for you to manage your accounts. We also give 
     <li>Enter your email address as your username.</li>
     <li>Enter the temporary password received via text on your mobile device, and create your new password.</li>
     <li>Input your device secure access code, and begin exploring.</li>
-</ul><br>
+</ul></b><br>
 Thank you for trusting us with your financial needs.<br><br>
 <b>Have a Question? Call us. We are here to help you 24/7/365</b><br><br>
-<b>Phone: <a href="tel8336823852">833-682-3852</a></b>.
+<b>Phone: <a href="tel8449965622">844-ZYNLO-BA</a></b>.
 </body>
 </html>

@@ -8,7 +8,7 @@
 <body>
 Dear ${userFirstName} ${userLastName},<br><br>
 The email address on your ZYNLO account has been updated. To verify your identity, please use access code ${otpCode}.<br>
-If you did not request this change, please contact Customer service immediately at 833-682-3852.<br><br>
+If you did not request this change, please contact Customer service immediately at 844-996-5622.<br><br>
 Sincerely,<br>
 ZYNLO
 </body>
