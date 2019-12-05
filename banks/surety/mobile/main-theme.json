@@ -1,27 +1,27 @@
 {
   "colors": {
-    "themePrimary": "#8D3630",
-    "themeSecondary": "#838488",
-    "linkPrimary": "#1287ff",
-    "themeShade": "#eaf0f4",
-    "neutralAccent": "#000",
-    "neutralPrimary": "#3e4546",
-    "neutralSecondary": "#7e8a8b",
-    "neutralTertiary": "#d8e1e4",
-    "neutralShade": "#fafafb",
-    "neutralClear": "#fff",
-    "error": "#a80000",
-    "errorAlt": "#e81123",
-    "warning": "#ffd500",
-    "warningAlt": "#bf9f00",
-    "success": "#7cd952",
-    "successAlt": "#58993a",
-    "accountAccent": "#838488",
-    "accountAccentAlt": "#58993a",
-    "depositAccent": "#7cd952",
-    "loanAccent": "#8D3630",
-    "loanAccentAlt": "#bf9f00",
-    "hintColor": "#9eacaa"
+    "themePrimary": "#79355e", 
+    "themeSecondary": "#FFEC97", 
+    "linkPrimary": "#79355e", 
+    "themeShade": "#FFEC97",
+    "neutralAccent": "#3D3C4D", 
+    "neutralPrimary": "#3D3C4D", 
+    "neutralSecondary": "#607080", 
+    "neutralTertiary": "#FFEC97", 
+    "neutralShade": "#3D3C4D", 
+    "neutralClear": "#ffffff", 
+    "error": "#79355E", 
+    "errorAlt": "#79355E",
+    "warning": "#79355E",
+    "warningAlt": "#79355E",
+    "success": "#FFEC97", 
+    "successAlt": "#FFEC97",
+    "accountAccent": "#3D3C4D", 
+    "accountAccentAlt": "#3D3C4D",
+    "depositAccent": "#3D3C4D",
+    "loanAccent": "#3D3C4D",
+    "loanAccentAlt": "#3D3C4D",
+    "hintColor": "#79355e"
   },
   "layout": {
     "backgroundColor": "#ffffff"
@@ -33,16 +33,16 @@
   },
   "forms": {
     "labels": {
-      "color": "#7e8a8b"
+      "color": "#79355e"
     },
     "hints": {
       "color": "#000000"
     },
     "inputs": {
-      "backgroundColor": "#ffffff",
+      "backgroundColor": "#fff",
       "borderRadius": 2,
       "borderWidth": 1,
-      "borderColor": "#7e8a8b",
+      "borderColor": "#B3B3B3",
       "padding": "5px 10px",
       "fontSize": 15,
       "fontWeight": "bold",
@@ -53,59 +53,58 @@
       "padding": "2px 5px",
       "backgroundColor": "transparent",
       "borderRadius": 2,
-      "borderBottomColor": "#000000",
+      "borderBottomColor": "#ffffff",
       "borderBottomWidth": 2,
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#000000",
+      "color": "#ffffff",
       "height": 40,
       "width": 35,
-      "placeholder": "*",
-      "placeholderColor": "#000000"
+      "placeholder": "*"
     },
     "switch": {
-      "nonActive": "#7e8a8b",
-      "active": "#7cd952"
+      "nonActive": "#3D3C4D",
+      "active": "#FFEC97"
     },
     "buttons": {
-      "primaryBackgroundColor": "#8D3630",
-      "secondaryBackgroundColor": "#7e8a8b",
+      "primaryBackgroundColor": "#FFEC97",
+      "secondaryBackgroundColor": "#3D3C4D",
       "padding": "5px 20px",
       "borderRadius": 20,
-      "primaryColor": "#fafafb",
-      "secondaryColor": "#fafafb",
+      "primaryColor": "#3D3C4D",
+      "secondaryColor": "#FFEC97",
       "fontSize": 14,
       "fontWeight": "normal"
     },
     "radioButtons": {
-      "buttonInnerColor": "#8D3630",
-      "buttonOuterColor": "#8D3630"
+      "buttonInnerColor": "#FFEC97",
+      "buttonOuterColor": "#79355E"
     }
   },
   "components": {
     "generic": {
       "alert": {
-        "overlayColor": "rgba(49,49,49, 0.7)",
-        "backgroundColor": "#ebe9e3",
-        "buttonsColor": "#1287ff"
+        "overlayColor": "transparent",
+        "backgroundColor": "#3D3C4D",
+        "buttonsColor": "#FFEC97"
       },
       "header": {
         "fontSize": 20,
         "fontWeight": 800
       },
       "links": {
-        "color": "#1287ff"
+        "color": "#FFEC97"
       },
       "text": {
-        "color": "#000000"
+        "color": "#ffffff"
       },
       "loader": {
-        "color": "#000000"
+        "color": "#ffffff"
       }
     },
     "specific": {
       "alternativeMethod": {
-        "color": "#000000"
+        "color": "#FFEC97"
       }
     }
   },
