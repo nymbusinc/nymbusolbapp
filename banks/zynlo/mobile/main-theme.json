@@ -1,30 +1,30 @@
 {
   "colors": {
-    "themePrimary": "#FFEC97", 
-    "themeSecondary": "#79355E", 
-    "linkPrimary": "#FFEC97", 
+    "themePrimary": "#79355e", 
+    "themeSecondary": "#FFEC97", 
+    "linkPrimary": "#79355e", 
     "themeShade": "#FFEC97",
-    "neutralAccent": "#FFEC97", 
-    "neutralPrimary": "#FFEC97",
-    "neutralSecondary": "#79355E", 
-    "neutralTertiary": "#BE6B95", 
-    "neutralShade": "#FFEC97", 
-    "neutralClear": "#3D3C4D", 
+    "neutralAccent": "#3D3C4D", 
+    "neutralPrimary": "#3D3C4D", 
+    "neutralSecondary": "#607080", 
+    "neutralTertiary": "#FFEC97", 
+    "neutralShade": "#3D3C4D", 
+    "neutralClear": "#ffffff", 
     "error": "#79355E", 
     "errorAlt": "#79355E",
     "warning": "#79355E",
     "warningAlt": "#79355E",
     "success": "#FFEC97", 
     "successAlt": "#FFEC97",
-    "accountAccent": "#FFEC97", 
-    "accountAccentAlt": "#79355E",
-    "depositAccent": "#FFEC97",
-    "loanAccent": "#FFEC97",
-    "loanAccentAlt": "#FFEC97",
-    "hintColor": "#FFEC97"
+    "accountAccent": "#3D3C4D", 
+    "accountAccentAlt": "#3D3C4D",
+    "depositAccent": "#3D3C4D",
+    "loanAccent": "#3D3C4D",
+    "loanAccentAlt": "#3D3C4D",
+    "hintColor": "#79355e"
   },
   "layout": {
-    "backgroundColor": "#3D3C4D"
+    "backgroundColor": "#ffffff"
   },
   "menu": {
     "iconItemColor": "#000",
@@ -33,7 +33,7 @@
   },
   "forms": {
     "labels": {
-      "color": "#FFEC97"
+      "color": "#79355e"
     },
     "hints": {
       "color": "#000000"
@@ -53,31 +53,31 @@
       "padding": "2px 5px",
       "backgroundColor": "transparent",
       "borderRadius": 2,
-      "borderBottomColor": "#242426",
+      "borderBottomColor": "#ffffff",
       "borderBottomWidth": 2,
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#242426",
+      "color": "#ffffff",
       "height": 40,
       "width": 35,
       "placeholder": "*"
     },
     "switch": {
-      "nonActive": "#79355E",
-      "active": "#B3B3B3"
+      "nonActive": "#3D3C4D",
+      "active": "#FFEC97"
     },
     "buttons": {
       "primaryBackgroundColor": "#FFEC97",
-      "secondaryBackgroundColor": "#BE6B95",
+      "secondaryBackgroundColor": "#3D3C4D",
       "padding": "5px 20px",
       "borderRadius": 20,
-      "primaryColor": "#000",
-      "secondaryColor": "#fff",
+      "primaryColor": "#3D3C4D",
+      "secondaryColor": "#FFEC97",
       "fontSize": 14,
       "fontWeight": "normal"
     },
     "radioButtons": {
-      "buttonInnerColor": "#79355E",
+      "buttonInnerColor": "#FFEC97",
       "buttonOuterColor": "#79355E"
     }
   },
@@ -85,8 +85,8 @@
     "generic": {
       "alert": {
         "overlayColor": "transparent",
-        "backgroundColor": "#242426",
-        "buttonsColor": "#242426"
+        "backgroundColor": "#3D3C4D",
+        "buttonsColor": "#FFEC97"
       },
       "header": {
         "fontSize": 20,
