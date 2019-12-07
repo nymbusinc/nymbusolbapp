@@ -1,14 +1,14 @@
 {
   "colors": {
-    "themePrimary": "#79355e", 
-    "themeSecondary": "#FFEC97", 
-    "linkPrimary": "#79355e", 
-    "themeShade": "#FFEC97",
+    "themePrimary": "#3D3C4D", 
+    "themeSecondary": "#3D3C4D", 
+    "linkPrimary": "#3D3C4D", 
+    "themeShade": "#f1f1f1",
     "neutralAccent": "#3D3C4D", 
     "neutralPrimary": "#3D3C4D", 
     "neutralSecondary": "#607080", 
-    "neutralTertiary": "#FFEC97", 
-    "neutralShade": "#3D3C4D", 
+    "neutralTertiary": "#d8e1e4", 
+    "neutralShade": "#fafafb", 
     "neutralClear": "#ffffff", 
     "error": "#79355E", 
     "errorAlt": "#79355E",
@@ -21,7 +21,7 @@
     "depositAccent": "#3D3C4D",
     "loanAccent": "#3D3C4D",
     "loanAccentAlt": "#3D3C4D",
-    "hintColor": "#79355e"
+    "hintColor": "#3D3C4D"
   },
   "layout": {
     "backgroundColor": "#ffffff"
@@ -33,7 +33,7 @@
   },
   "forms": {
     "labels": {
-      "color": "#79355e"
+      "color": "#3D3C4D"
     },
     "hints": {
       "color": "#000000"
@@ -53,11 +53,11 @@
       "padding": "2px 5px",
       "backgroundColor": "transparent",
       "borderRadius": 2,
-      "borderBottomColor": "#ffffff",
+      "borderBottomColor": "#3D3C4D",
       "borderBottomWidth": 2,
       "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#ffffff",
+      "color": "#3D3C4D",
       "height": 40,
       "width": 35,
       "placeholder": "*"
@@ -85,26 +85,26 @@
     "generic": {
       "alert": {
         "overlayColor": "transparent",
-        "backgroundColor": "#3D3C4D",
-        "buttonsColor": "#FFEC97"
+        "backgroundColor": "#eaeaea",
+        "buttonsColor": "#3D3C4D"
       },
       "header": {
         "fontSize": 20,
         "fontWeight": 800
       },
       "links": {
-        "color": "#FFEC97"
+        "color": "#3D3C4D"
       },
       "text": {
-        "color": "#ffffff"
+        "color": "#3D3C4D"
       },
       "loader": {
-        "color": "#ffffff"
+        "color": "#3D3C4D"
       }
     },
     "specific": {
       "alternativeMethod": {
-        "color": "#FFEC97"
+        "color": "#3D3C4D"
       }
     }
   },
