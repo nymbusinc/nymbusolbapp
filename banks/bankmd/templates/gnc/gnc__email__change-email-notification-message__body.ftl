@@ -3,9 +3,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <title>New Secure Message in Online/Mobile Banking</title>
+    <title>Your Contact Information has been Updated</title>
 </head>
 <body>
-A new secure message has been sent to you by BankMD. <br>Please log in to Online/Mobile Banking to view the secure message.<br>
+Dear ${alertReceiverContactName},<br><br>
+The email address on your BankMD account has been updated.<br>
+If you did not request this change, please contact Client Services immediately at 888-534-3509.<br><br>
+Sincerely,<br>
+BankMD
 </body>
 </html>
