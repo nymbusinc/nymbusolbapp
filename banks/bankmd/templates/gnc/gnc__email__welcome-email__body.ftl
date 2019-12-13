@@ -14,12 +14,8 @@ Click <a href="https://bankmdolb.nymbus.com/" target="_blank">here</a> and follo
     <li>Enter the temporary password received via text on your mobile device, and create your new password.</li>
     <li>Input your device secure access code, and begin exploring.</li>
 </ul><br>
-<b>Here's what's next:</b>
-<ul>
-    <li>If you selected to fund your account through ACH, you will receive an email in the next few days to verify your micro deposits and complete the funding process.</li>
-    <li>Once you have successfully logged into online banking, you may begin submitting mobile deposits and setting up bill pay and account transfers.</li>
-</ul><br>
+<br>
 Need additional support? Call us, we’re here to help.<br>
-<b>Phone: 1 (888) 534-3509. Our Support Team is available to assist you 24/7/365.</b>
+<b>Phone: 888-534-3509. Our Support Team is available to assist you 24/7/365.</b>
 </body>
 </html>

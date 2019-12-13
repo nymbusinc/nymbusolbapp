@@ -1,3 +1,3 @@
-The email address on your ZYNLO account has been updated.
+The email address on your BankMD account has been updated.
 
-If you did not request this change, please contact Client Services immediately at 844-996-5622.
+If you did not request this change, please contact Client Services immediately at 888-534-3509.

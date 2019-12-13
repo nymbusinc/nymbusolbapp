@@ -1,1 +1,1 @@
-New Secure Message in Online/Mobile Banking
+New Secure Message in BankMD Online/Mobile Banking
