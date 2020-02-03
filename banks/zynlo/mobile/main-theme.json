@@ -7,7 +7,7 @@
     "neutralAccent": "#3D3C4D", 
     "neutralPrimary": "#3D3C4D", 
     "neutralSecondary": "#607080", 
-    "neutralTertiary": "#d8e1e4", 
+    "neutralTertiary": "#ababd5", 
     "neutralShade": "#fafafb", 
     "neutralClear": "#ffffff", 
     "error": "#79355E", 
@@ -67,12 +67,12 @@
       "active": "#FFEC97"
     },
     "buttons": {
-      "primaryBackgroundColor": "#FFEC97",
+      "primaryBackgroundColor": "#3D3C4D",
       "secondaryBackgroundColor": "#3D3C4D",
       "padding": "5px 20px",
       "borderRadius": 20,
-      "primaryColor": "#3D3C4D",
-      "secondaryColor": "#FFEC97",
+      "primaryColor": "#FFFFFF",
+      "secondaryColor": "#FFFFFF",
       "fontSize": 14,
       "fontWeight": "normal"
     },
