@@ -11,17 +11,6 @@ Dear client,
 <br><br>
 A ${direction?lower_case} transaction amounting to <#if accountCurrencyID == "USD">$</#if>${amount}<#if accountCurrencyID != "USD"> ${accountCurrencyID}</#if> was executed on ${accountNumberPublic} ${(accountAlias)!""} account on ${postingDate}.
 <br><br>
-More details:<br>
-<table style="padding-left: 10px;">
-    <tr><td>Posting date:</td><td>${postingDate}</td></tr>
-    <tr><td>Value date:</td><td>${valueDate}</td></tr>
-    <tr><td>Partner bank:</td><td>${(partnerAccountBank)!""}</td></tr>
-    <tr><td>Partner account:</td><td>${(partnerAccountNumber)!""} ${(partnerAccountName)!""}</td></tr>
-    <tr><td>Message for receiver:</td><td>${(messageForPayee)!""}</td></tr>
-    <tr><td>Merchant name:</td><td>${(merchantName)!""}</td></tr>
-    <tr><td>MCC:</td><td>${(mcc)!""}</td></tr>
-</table>
-<br><br>
 Sincerely,<br>
 FACILE
 <br><br>

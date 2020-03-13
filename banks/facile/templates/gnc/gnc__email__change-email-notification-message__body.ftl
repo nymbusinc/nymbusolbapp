@@ -8,7 +8,7 @@
 <body>
 Dear ${alertReceiverContactName},<br><br>
 The email address on your FACILE account has been updated.<br>
-If you did not request this change, please contact Client Services immediately at 833-682-3827.<br><br>
+If you did not request this change, please contact Client Services immediately at 833.682.3827.<br><br>
 Sincerely,<br>
 FACILE
 </body>

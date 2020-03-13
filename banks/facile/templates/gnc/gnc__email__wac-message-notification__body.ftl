@@ -8,7 +8,7 @@
 <body>
 Dear ${alertReceiverContactName},<br><br>
 You have received an important message from FACILE. To view this message, please sign into your Online Banking or Mobile application. If you have any questions regarding your message or experience problems retrieving your message, please contact us.<br><br>
-Your satisfaction matters. If our service falls short of your expectations, let us know right away so we can address your concerns. Please contact us at 833-682-3827.<br><br>
+Your satisfaction matters. If our service falls short of your expectations, let us know right away so we can address your concerns. Please contact us at 833.682.3827.<br><br>
 Best regards,<br>
 FACILE
 </body>
