@@ -1,0 +1,118 @@
+{
+  "colors": {
+    "themePrimary": "#00A6FF", 
+    "themeSecondary": "#00A6FF", 
+    "linkPrimary": "#00A6FF", 
+    "themeShade": "#ffffff",
+    "neutralAccent": "#00A6FF", 
+    "neutralPrimary": "#3D3C4D", 
+    "neutralSecondary": "#607080", 
+    "neutralTertiary": "#f5f5f5", 
+    "neutralShade": "#fafafb", 
+    "neutralClear": "#ffffff", 
+    "error": "#00A6FF", 
+    "errorAlt": "#00A6FF",
+    "warning": "#00A6FF",
+    "warningAlt": "#00A6FF",
+    "success": "#00A6FF", 
+    "successAlt": "#00A6FF",
+    "accountAccent": "#00A6FF", 
+    "accountAccentAlt": "#00A6FF",
+    "depositAccent": "#00A6FF",
+    "loanAccent": "#00A6FF",
+    "loanAccentAlt": "#00A6FF",
+    "hintColor": "#00A6FF"
+  },
+  "layout": {
+    "backgroundColor": "#ffffff"
+  },
+  "menu": {
+    "iconItemColor": "#333333",
+    "arrowAndroidColor": "gray",
+    "arrowIosColor": "#333333"
+  },
+  "forms": {
+    "labels": {
+      "color": "#333333"
+    },
+    "hints": {
+      "color": "#000000"
+    },
+    "inputs": {
+      "backgroundColor": "#fff",
+      "borderRadius": 2,
+      "borderWidth": 1,
+      "borderColor": "#B3B3B3",
+      "padding": "5px 10px",
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#333333",
+      "height": 40
+    },
+    "pin": {
+      "padding": "2px 5px",
+      "backgroundColor": "transparent",
+      "borderRadius": 2,
+      "borderBottomColor": "#333333",
+      "borderBottomWidth": 2,
+      "fontSize": 15,
+      "fontWeight": "bold",
+      "color": "#333333",
+      "height": 40,
+      "width": 35,
+      "placeholder": "*"
+    },
+    "switch": {
+      "nonActive": "#3D3C4D",
+      "active": "#00A6FF"
+    },
+    "buttons": {
+      "primaryBackgroundColor": "#00A6FF",
+      "secondaryBackgroundColor": "#00A6FF",
+      "padding": "5px 20px",
+      "borderRadius": 20,
+      "primaryColor": "#ffffff",
+      "secondaryColor": "#ffffff",
+      "fontSize": 14,
+      "fontWeight": "normal"
+    },
+    "radioButtons": {
+      "buttonInnerColor": "#00A6FF",
+      "buttonOuterColor": "#333333"
+    }
+  },
+  "components": {
+    "generic": {
+      "alert": {
+        "overlayColor": "transparent",
+        "backgroundColor": "#eaeaea",
+        "buttonsColor": "#00A6FF"
+      },
+      "header": {
+        "fontSize": 20,
+        "fontWeight": 800
+      },
+      "links": {
+        "color": "#00A6FF"
+      },
+      "text": {
+        "color": "#3D3C4D"
+      },
+      "loader": {
+        "color": "#3D3C4D"
+      }
+    },
+    "specific": {
+      "alternativeMethod": {
+        "color": "#00A6FF"
+      }
+    }
+  },
+  "modernDashboard": {
+    "backgroundColor": "#00A6FF",
+    "stripBackgroundColor": "#ffffff",
+    "boxBackgroundColor": "#000000",
+    "iconBackgroundColor": "#00A6FF",
+    "iconTextColor": "#333333"
+  }
+}

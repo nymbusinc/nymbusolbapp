@@ -1,0 +1,13 @@
+{
+	"en": {
+		"common.bankName": "ZYNLO",
+
+		"app.footer.copyright": "Created for ZYNLO by NYMBUS. Use of this system is limited to authorized users only and can be monitored.",
+
+		"auth.login.passwordReset.successPhoneNumber": "(844) 966-5622",
+
+		"common.bankNameShort": "ZYNLO",
+
+		"checks.stopPayment.new.disclosure": "Stop payments are not guaranteed, however ZYNLO will make every attempt to complete your request. If the item was sent electronically or if ZYNLO has already accepted the check for processing, we will not be able to stop the item.  The stop payment will remain in effect for the next 6 months and your account will be charged a stop payment fee for this service in accordance with your accounts fee schedule.  If you have any questions about the stop payment process call us at 844-996-5622."
+	}
+}

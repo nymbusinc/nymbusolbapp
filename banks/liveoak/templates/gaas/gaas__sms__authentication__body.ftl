@@ -1,0 +1,1 @@
+ZYNLO: Enter this secure access code to authenticate your device: ${code}. Code valid until ${validTo?time}. Questions? Call 844-996-5622.
