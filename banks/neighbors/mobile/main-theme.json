@@ -23,6 +23,10 @@
     "loanAccentAlt": "#bf9f0",
     "hintColor": "#9eacaa"
   },
+  "header": {
+    "headerBackgroundColor":"#ffffff",
+    "statusBarBackgroundColor":"#cccccc"
+  },
   "layout": {
     "backgroundColor": "#ffffff"
   },
@@ -91,9 +95,7 @@
       },
       "header": {
         "fontSize": 20,
-        "fontWeight": 800,
-        "headerBackgroundColor":"#ffffff",
-        "statusBarBackgroundColor":"#cccccc"
+        "fontWeight": 800
       },
       "links": {
         "color": "#1287ff"
