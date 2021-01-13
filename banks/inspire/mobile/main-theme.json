@@ -90,7 +90,9 @@
       },
       "header": {
         "fontSize": 20,
-        "fontWeight": 800
+        "fontWeight": 800,
+        "headerBackgroundColor":"#ffffff",
+        "statusBarBackgroundColor":"#cccccc"
       },
       "links": {
         "color": "#1287ff"
